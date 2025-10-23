@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/DesertScene.unity
+    guid: de5561f2f1fccae4a86cde9522fda8fe
+  - enabled: 1
+    path: Assets/Scenes/360VideoScene.unity
+    guid: 99c9720ab356a0642a771bea13969a05
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 736e9239548923a4db8db1aab4819f00, type: 2}
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: d3fa829f52be6464eb76111a8854b448, type: 3}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: b2b2aef68a89ae048b68ebacbcecccef, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 0aa616f80a2288048a11871f30dea6f9, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 7a393e5f8a2dc2347b3c7b643e375ea0, type: 2}
+  m_UseUCBPForAssetBundles: 0

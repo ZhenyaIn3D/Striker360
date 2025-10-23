@@ -1,0 +1,34 @@
+{
+    "name": "VRInputActions",
+    "maps": [
+        {
+            "name": "XRRightHand",
+            "id": "2bc576ce-9f6b-425a-b21f-b4b0ad81bb69",
+            "actions": [
+                {
+                    "name": "Button B Press",
+                    "type": "Button",
+                    "id": "5e111c31-454d-404d-bef9-30afa555fafa",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "862f8f3f-2689-4e62-95c1-7e6b9cdcca0c",
+                    "path": "<XRController>{RightHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Button B Press",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
