@@ -119,7 +119,7 @@ public class Video360Manager : MonoBehaviour
         {
             hmd = devices[0];
             hmdInitialized = true;
-            HMDFound.SetActive(true);
+            //HMDFound.SetActive(true);
             if (debugMode)
             {
                 Debug.Log($"HMD Initialized: {hmd.name}");
@@ -138,7 +138,7 @@ public class Video360Manager : MonoBehaviour
         }
         else
         {
-            HMDNotFound.SetActive(true);
+            //HMDNotFound.SetActive(true);
             Debug.LogWarning("No HMD device found! Will retry on next check.");
         }
     }
