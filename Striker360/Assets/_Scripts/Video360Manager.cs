@@ -78,7 +78,7 @@ public class Video360Manager : MonoBehaviour
         
         // Configure video player
         videoPlayer.playOnAwake = false;
-        videoPlayer.isLooping = false;
+        videoPlayer.isLooping = true;
         videoPlayer.renderMode = VideoRenderMode.MaterialOverride;
         
         // Assign video clip

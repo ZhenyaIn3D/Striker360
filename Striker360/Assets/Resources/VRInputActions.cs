@@ -99,6 +99,15 @@ public partial class @VRInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Button X Press"",
+                    ""type"": ""Button"",
+                    ""id"": ""4a616f93-0a70-4c04-aef4-acfb96207e49"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -112,6 +121,17 @@ public partial class @VRInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""Button B Press"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1cb79840-30d3-438f-b015-f2baeeeb34ad"",
+                    ""path"": ""<XRController>{LeftHand}/{SecondaryButton}"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Button X Press"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -121,6 +141,7 @@ public partial class @VRInputActions: IInputActionCollection2, IDisposable
         // XRRightHand
         m_XRRightHand = asset.FindActionMap("XRRightHand", throwIfNotFound: true);
         m_XRRightHand_ButtonBPress = m_XRRightHand.FindAction("Button B Press", throwIfNotFound: true);
+        m_XRRightHand_ButtonXPress = m_XRRightHand.FindAction("Button X Press", throwIfNotFound: true);
     }
 
     ~@VRInputActions()
@@ -202,6 +223,7 @@ public partial class @VRInputActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_XRRightHand;
     private List<IXRRightHandActions> m_XRRightHandActionsCallbackInterfaces = new List<IXRRightHandActions>();
     private readonly InputAction m_XRRightHand_ButtonBPress;
+    private readonly InputAction m_XRRightHand_ButtonXPress;
     /// <summary>
     /// Provides access to input actions defined in input action map "XRRightHand".
     /// </summary>
@@ -217,6 +239,10 @@ public partial class @VRInputActions: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "XRRightHand/ButtonBPress".
         /// </summary>
         public InputAction @ButtonBPress => m_Wrapper.m_XRRightHand_ButtonBPress;
+        /// <summary>
+        /// Provides access to the underlying input action "XRRightHand/ButtonXPress".
+        /// </summary>
+        public InputAction @ButtonXPress => m_Wrapper.m_XRRightHand_ButtonXPress;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -246,6 +272,9 @@ public partial class @VRInputActions: IInputActionCollection2, IDisposable
             @ButtonBPress.started += instance.OnButtonBPress;
             @ButtonBPress.performed += instance.OnButtonBPress;
             @ButtonBPress.canceled += instance.OnButtonBPress;
+            @ButtonXPress.started += instance.OnButtonXPress;
+            @ButtonXPress.performed += instance.OnButtonXPress;
+            @ButtonXPress.canceled += instance.OnButtonXPress;
         }
 
         /// <summary>
@@ -260,6 +289,9 @@ public partial class @VRInputActions: IInputActionCollection2, IDisposable
             @ButtonBPress.started -= instance.OnButtonBPress;
             @ButtonBPress.performed -= instance.OnButtonBPress;
             @ButtonBPress.canceled -= instance.OnButtonBPress;
+            @ButtonXPress.started -= instance.OnButtonXPress;
+            @ButtonXPress.performed -= instance.OnButtonXPress;
+            @ButtonXPress.canceled -= instance.OnButtonXPress;
         }
 
         /// <summary>
@@ -307,5 +339,12 @@ public partial class @VRInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnButtonBPress(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Button X Press" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnButtonXPress(InputAction.CallbackContext context);
     }
 }
