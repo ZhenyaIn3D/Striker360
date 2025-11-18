@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 119347631}
   - component: {fileID: 119347630}
   - component: {fileID: 119347633}
+  - component: {fileID: 119347634}
   m_Layer: 0
   m_Name: VideoSphere
   m_TagString: Untagged
@@ -315,7 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 1033633683}
-  video360Clip: {fileID: 32900000, guid: 0672603d0173f42468221a9b51a822b8, type: 3}
+  video360Clip: {fileID: 32900000, guid: 092ae621a6365d045bc9ca1646b9012f, type: 3}
   videoSphere: {fileID: 119347628}
   checkInterval: 0.5
   debugMode: 1
@@ -323,6 +324,18 @@ MonoBehaviour:
   HMDNotFound: {fileID: 2124840148}
   returnAfterVideoEnds: 0
   delayBeforeReturn: 2
+--- !u!114 &119347634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 119347628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b582c53b6b93456a9b5f3aa99886c50e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1214,7 +1227,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1033633682}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 0672603d0173f42468221a9b51a822b8, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 092ae621a6365d045bc9ca1646b9012f, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
